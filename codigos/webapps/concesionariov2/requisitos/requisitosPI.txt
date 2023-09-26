@@ -1,0 +1,50 @@
+Evaluación online DAM/DAW
+1º - Evaluación tradicional
+Actividades obligatorias de cada módulo - 40%
+Examen Tipo A de cada módulo que es el 60%
+2-3 ejecicios una matriz buscar tal palabra y remplazarla por …..
+2-3 Poo
+?
+2º - Evaluación Proyecto
+Actividades obligatorias de cada módulo - 40%
+Módulo 1 Actividad preparación del entorno de trabajo. Módulo 3 Actividad obligatoria 1 - Estructuras de control Modulo 4 Actividad Obligatoria Estructuras de daots estáticas
+Módulo 5 - Actividad Obligatoria String
+Módulo 6 - Actividad Obligatoria 1 - Fiesta
+Módulo 7 - Actividad Obligartoria - Calificaciones
+El proyecto
+Prototipo
+FRONT - página web (diferente páginas. menu, tener html semantico, )
+Back - Gestion naves→ formulario para dar de altas las naves y tienen un foto (modelo con DAO y JDBC) y Poder listar las naves.
+Muy aconsejable poner un buscador.
+BD (si es completa)
+El modelo tiene JavaDoc
+Control de versiones . (subir el repositorio a gitHub)
+Memoria
+Implemetar una maquina virtual con ubuntu, instalar LAMP por separado y TOMCAT (Documentar todo el proceso) y subir la aplicación
+MEMORIA.
+Introducción ………
+Tecnogías y herramientas ….
+Análisis y diseño
+UML
+Diagrama de clases
+Diagrama de casos de uso
+BD
+Diagrama de E/R
+Tester - Pruebas unitarias de 2 a n metodos
+Conclusiones
+ENTREGLABLES
+Memoria
+Dirección del repositorio
+El video
+Y luego en plataforma tenemos código en zip
+EXAMENES
+Examen de proyectos
+2 pregunta,
+n → Describe una de las entidades realizada en tu proyecto
+como pasas des for al back
+
+FECHAS
+27/MAYO y el 3/JUNIO (FOL)→ ORDINARIA. (NE)
+*27→3 ENTREGA DE PROYECTO
+10/JUNIO Y EL 17/JUNIO → EXTRAORDINARIA ()
+10/JUNIO LIMITE PARA EL PROYECTO → ENTREGA PROYECTO

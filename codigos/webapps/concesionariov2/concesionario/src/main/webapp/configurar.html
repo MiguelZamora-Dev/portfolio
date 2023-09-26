@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <title>Configurar</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <button onclick="window.location='./indexPrivado.html'" class="botones">Volver</button>
+    </div>
+    <form id="ficha-vehiculo-container" action="javascript:enviarConfigurado()" method="post">
+        <div id="ficha-vehiculo-subcontainer">
+            <div id="ve-ha-sido-solicitado">
+                
+            </div>
+            <div id="ficha-vehiculo-block">
+                <div id="ficha-img">
+                    <img id="ficha-imagen" src="" alt="vehiculo a configurar" style="max-width: 100%;">
+                </div>
+                <div id="ficha-description-container">
+                    <div id="ficha-modelo">
+                        <h3 id="ficha-modelo-titulo">Modelo</h3>
+                        <div id="ficha-stats">
+                            <div id="ficha-precio" class="ficha-stat-info">
+                                Precio: 
+                                <span id="ficha-precio-span">
+                                    
+                                </span>
+                                <span> &#8364;</span>
+                            </div>
+                            <div class="ficha-stat-info">
+                                <div>Colores: </div>
+                                <div id="ficha-colores">
+                                    
+                                </div>
+                            </div>
+                            <div id="ficha-caballos" class="ficha-stat-info">
+                                Caballos:
+                                <span id="ficha-caballos-span">
+                                    
+                                </span>
+                                <span> CV</span>
+                            </div>
+                            <div id="ficha-maletero" class="ficha-stat-info">
+                                Maletero:
+                                <span id="ficha-maletero-span">
+                                    
+                                </span>
+                                <span> l</span>
+                            </div>
+                            <div id="ficha-puertas" class="ficha-stat-info">
+                                Puertas:
+                                <span id="ficha-puertas-span">
+                                    
+                                </span>
+                            </div>
+                            <div>
+                                <button type="submit" class="botones">Solicitar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ficha-desc-container">
+                <p id="ficha-desc"></p>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+
+    function enviarConfigurado () {
+        let xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+
+                try {
+    				document.getElementById("ve-ha-sido-solicitado").innerHTML = this.responseText;
+                } catch (error) {
+                    console.log("No se ha podido solicitar el modelo: " + error);
+                }
+            }
+        };
+
+        xhttp.open("POST", "Requests", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("smodelo=" + fmodelo.innerText + "&sprecio=" + fprecio.innerText + "&scolores=" + fcolores.innerText + "&scaballos=" + fcaballos.innerText + "&smaletero=" + fmaletero.innerText + "&spuertas=" + fpuertas.innerText);
+
+    }
+
+    function modificarFichaVehiculo (jsonify) {
+
+        let imagen = (jsonify['imagenDestacada'] == null || jsonify['imagenDestacada'] == "null" || jsonify['imagenDestacada'] == undefined) ? "" : jsonify['imagenDestacada'];
+        let modelo = (jsonify['modelo'] === "null" || jsonify['modelo'] == null || jsonify['modelo'] == undefined) ? "" : jsonify['modelo'];
+        let precio = jsonify['precio'] == 0 ? "" : jsonify['precio'];
+        let colores = (jsonify['colores'] === "null" || jsonify['colores'] == null || jsonify['colores'] == undefined) ? "" : jsonify['colores'];
+        let caballos = jsonify['caballos'] == 0 ? "" : jsonify['caballos'];
+        let capacidadMaletero = jsonify['maletero'] == 0 ? "" : jsonify['maletero'];
+        let puertas = jsonify['puertas'] == 0 ? "" : jsonify['puertas'];
+        let descripcion = (jsonify['descripcion'] === "null" || jsonify['descripcion'] == null || jsonify['descripcion'] == undefined) ? "" : jsonify['descripcion'];
+        
+
+        if (modelo == "claseB2023") {
+            modelo = "Clase B 2023";
+        } else if (modelo == "claseASedan") {
+            modelo = "Clase A Sedán";
+        } else if (modelo == "claseESedan") {
+            modelo = "Clase E Sedán";
+        }
+
+        fimg = document.getElementById("ficha-img");
+        fmodelo = document.getElementById("ficha-modelo-titulo");
+        fprecio = document.getElementById("ficha-precio-span");
+        fcolores = document.getElementById("ficha-colores");
+        fcaballos = document.getElementById("ficha-caballos-span");
+        fmaletero = document.getElementById("ficha-maletero-span");
+        fpuertas = document.getElementById("ficha-puertas-span");
+        fficha = document.getElementById("ficha-desc");
+
+        fimg.innerHTML = '<img id="ficha-imagen" src="' + imagen + '" alt="" style="max-width: 100%;">';
+	    fmodelo.innerHTML = modelo;
+	    fprecio.innerHTML = precio;
+        fcolores.innerHTML = colores; 
+	    fcaballos.innerHTML = caballos; 
+        fmaletero.innerHTML = capacidadMaletero;
+        fpuertas.innerHTML = puertas;  
+        fficha.innerHTML = descripcion;
+
+
+    }
+
+    window.onload = function () {
+        try {
+        	var fimg = document.getElementById("ficha-img");
+			var fmodelo = document.getElementById("ficha-modelo-titulo");
+			var fprecio = document.getElementById("ficha-precio-span");
+			var fcolores = document.getElementById("ficha-colores");
+			var fcaballos = document.getElementById("ficha-caballos-span");
+			var fmaletero = document.getElementById("ficha-maletero-span");
+			var fpuertas = document.getElementById("ficha-puertas-span");
+			var fficha = document.getElementById("ficha-desc");        	
+        
+            const parametrosUrl = new URLSearchParams(location.search);
+            let parametroModelo = parametrosUrl.get('modelo');
+            fetch ("./jsons/vehiculos/" + parametroModelo + ".json")
+            .then((response) => response.json())
+            .then((json) => modificarFichaVehiculo(json));
+        } catch (e) {
+            console.log(e);
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,33 @@
+1. (Revisar) scripts.js : hay que coger el resto de datos y enviarlos al backend para ser utilizados
+2. (Deprecated: No nos interesa por tema de SEO) Pensar en tratar los elementos enumerables de indexPrivado, Empleados etc como componentes y rellenarlo mediante js
+3. Comprobar que el email es un email y que el telefono es un numero
+4. (Revisar) la propagación de errores SQL y llevarlo hasta el controlador para gestionarlo
+5. Actualizar las funciones de js que recuperan datos de formularios
+6. Terminar de validar datos (las funciones están pero no son llamadas)
+7. (Revisar) requests inicio-sesion-usuario revisar la logica de apertura de .cuenta.html
+8. Quitar los console.log y cambiar los syso por logs en servidor
+9. (Revisar) Añadir más observers 
+10. (Revisar) rabajar el front de cuenta
+11. Seleccionar los coches para el stock
+12. (Revisar) Textos para sobreNosotros e Index
+13. (Revisar) Poner el footer en el suelo si no hay suficiente contenido
+14. Recabar informacion sobre diferentes vehículos y meterlos al json
+15. (Revisar) Con la informacion de los jsons hacer un componente con el html que hay añadiendo la informacion de cada uno y añadiendolos al dom
+16. (Revisar) Reajustar el peso de las imágenes para que carguen mas rapido
+17. (Revisar) Añadir todos los alts de las imágenes 
+18. (Revisar) Cambiar todos los lang=en de las paginas por lang=es
+19. Recolocar lo del doPost en sus respectivos métodos
+20. (Revisar) apañar imagen index
+21. (Revisar) apaño registro cliente redireccion
+22. (Revisar) aviso de cookies
+23. (Revisar) tamaño del título se queda corto en cierta anchura
+24. (Revisar) reajustar para diferentes tamaños de pantalla
+25. Subir foto para el registro de empleado 
+26. Cuando el usuario ya esté registrado y se esté intentando hacer otro registro que devuelva los datos para que solo tenga que cambiar el usuario
+27. Conseguir HTTPS SSL
+28. (Revisar) Mejorar el SEO
+29. (Deprecated: Código eliminado. Hay que volver a empezarlo) Intentando meter imágenes. Se ha modificado Requests en el método de insertar Empleado, en DAO insertar y recuperar Empleado (los dos métodos)
+30. Mirar para hacer un carrusel en fichaVehiculo
+31. Cambiar colores en configurar
+32. Crear perfil en google my business
+33. Crear perfiles en redes sociales

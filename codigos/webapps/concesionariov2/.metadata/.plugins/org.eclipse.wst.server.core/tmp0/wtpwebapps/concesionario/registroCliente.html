@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./scripts.js"></script>
+    <title>Registrarse</title>
+</head>
+<body>
+    <form action="javascript:recuperarDatosFormRegCli()" name="regCli" id="regCli" method="post">
+        <div id="reg-container">
+            <div id="reg-subcontainer">
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Usuario
+                    </span>
+                    <input type="text" name="reg-usuario" id="reg-usuario" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Nombre
+                    </span>
+                    <input type="text" name="reg-nombre" id="reg-nombre" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Teléfono
+                    </span>
+                    <input type="tel" name="reg-telefono" id="reg-telefono" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Email
+                    </span>
+                    <input type="email" name="reg-email" id="reg-email" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Contraseña
+                    </span>
+                    <input type="password" name="reg-psw" id="reg-psw" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Repetir contraseña
+                    </span>
+                    <input type="password" name="reg-rep-psw" id="reg-rep-psw" class="reg-data">
+                </div>
+                <div id="inicio-sesion-politicas">
+                    <div class="inicio-sesion-aceptar-politica">
+                        <input type="checkbox" name="TerminosYCondiciones" id="TerminosYCondiciones">
+                        <span class="is-acpt-pols-txt">Acepto los <a href="./textosLegales/avisoLegal.html"class="aceptar-pols-style">Términos y Condiciones</a></span>    
+                    </div>
+                    <div class="inicio-sesion-aceptar-politica">
+                        <input type="checkbox" name="PrivacidadYCookies" id="PrivacidadYCookies">
+                        <span class="is-acpt-pols-txt">Acepto la política de <a href="./textosLegales/politicaPrivacidad.html"class="aceptar-pols-style">Privacidad</a> y la de <a href="./textosLegales/cookies.html"class="aceptar-pols-style">Cookies</a></span>    
+                    </div>
+                    </div>
+                <div>
+                <div id="reg-botones">
+                    <button onclick="window.location='./index.html'" class="botones">Volver</button>
+                    <button type="submit" class="botones" name="regCliSubmit" id="reg-cli-submit">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

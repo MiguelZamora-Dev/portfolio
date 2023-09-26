@@ -1,0 +1,19 @@
+{
+    "modelo": "claseASedan",
+    "imagenDestacada": "./resources/img/MBASedan/Mercedes-Benz-A-200-Sedan-2023-1-1074x483.jpg",
+    "imagenFrontal": "",
+    "imagenLateral": "",
+    "imagenTrasera": "./resources/img/MBASedan/Mercedes-AMG-A-35-4Matic-Sedan-2023-1-atras-ahora-si.jpg",
+    "imagenInterior": "./resources/img/MBASedan/Mercedes-AMG-A-35-4Matic-Sedan-2023-3-interior-2.jpg",
+    "precio": 39075,
+    "colores": ["#0000ff", "#ffffff", "#575757", "#000000", "#ff0000"],
+    "caballos": 136,
+    "maletero": 420,
+    "puertas": 5,
+    "descripcion": "Este es un vehiculo versátil, pensado para el día a día más exigente",
+    "azul": "../../resources/img/MBASedan/mbsasedan-azul.jpg",
+    "blanco": "../../resources/img/MBASedan/mbsasedan-blanco.jpg",
+    "gris": "../../resources/img/MBASedan/mbsasedan-gris.jpg",
+    "negro": "../../resources/img/MBASedan/mbsasedan-negro.jpg",
+    "rojo": "../../resources/img/MBASedan/mbsasedan-rojo.webp"
+}

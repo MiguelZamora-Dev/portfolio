@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime id\="Concesionario-v2" location\="C\:/Users/Pc/Documents/1DAW/DAW-private/2PI/version2/concesionario/apache-tomcat-9.0.73" name\="Concesionario-v2" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.90" timestamp\="0"/>\r\n  <runtime id\="Concesionario-v2.1" location\="C\:/Users/Pc/Documents/1DAW/DAW-private/2PI/version2/apache-tomcat-9.0.73" name\="Concesionario-v2.1" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.90" timestamp\="0"/>\r\n</runtimes>\r\n

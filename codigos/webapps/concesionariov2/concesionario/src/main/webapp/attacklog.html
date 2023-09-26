@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <title>Attack logs</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <button onclick="window.location='./funcionesSistema.html'" class="botones">Volver</button>
+    </div>
+    <section id="attack-logs-container" style="margin: 1em"></section>
+</body>
+<script>
+
+    window.onload = function () {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("attack-logs-container").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("POST", "Requests", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("ataques=true");
+    }
+</script>
+</html>

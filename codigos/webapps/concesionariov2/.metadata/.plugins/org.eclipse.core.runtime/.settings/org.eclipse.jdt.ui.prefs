@@ -1,0 +1,11 @@
+command=C\:\\Program Files\\Java\\jdk-19\\bin\\javadoc.exe
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="modelo.Persona"><rhs name\="modelo.Empleado"/></lhs><lhs name\="modelo.Color"><rhs name\="modelo.Color"/></lhs><lhs name\="controlador.RecuperarDBDAO"><rhs name\="controlador.RecuperarDBDAO"/></lhs><lhs name\="controlador.ActualizarDBDAO"><rhs name\="controlador.ActualizarDBDAO"/></lhs><lhs name\="controlador.IntroducirDBDAO"><rhs name\="controlador.IntroducirDBDAO"/></lhs><lhs name\="java.time.temporal.Temporal"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAccessor"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAdjuster"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.chrono.ChronoLocalDate"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.util.Date"><rhs name\="java.sql.Date"/><rhs name\="java.sql.Timestamp"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.sql.Date"/><rhs name\="java.sql.Timestamp"/></lhs><lhs name\="java.sql.Date"><rhs name\="java.sql.Date"/></lhs><lhs name\="modelo.Vehiculo"><rhs name\="modelo.Vehiculo"/></lhs><lhs name\="java.io.Writer"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.PrintWriter"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.sql.Timestamp"><rhs name\="java.sql.Timestamp"/></lhs></history>
+content_assist_number_of_computers=17
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

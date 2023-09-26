@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <title>Empleado</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <button onclick="window.location='./indexPrivado.html'" class="botones">Volver</button>
+    </div>
+    <div class="empleadosContainer">
+        <div class="fotoEmpVM">
+            foto
+        </div>
+        <div class="infoEmpVM">
+            <div class="nombreEmpVM" id="nombre-emp-vm">
+                Nombre
+            </div>
+            <div class="tlfEmpVM" id="telefono-emp-vm">
+                Telefono
+            </div>
+            <div class="emailEmpVM" id="email-emp-vm">
+                Email
+            </div>
+            <div class="puestoEmpVM" id="puesto-emp-vm">
+                Puesto
+            </div>
+            <div class="dptEmpVM" id="departamento-emp-vm">
+                Departamento
+            </div>
+            <div class="sueldoEmpVM" id="sueldo-emp-vm">
+                Sueldo
+            </div>
+            <div class="usuarioEmpVM" id="usuario-emp-vm">
+                Usuario
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        let active = true;
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.responseText == "./iniciarSesion.html") {
+                    window.location.href = this.responseText;
+                } else {
+                    let jsonResponse = this.responseText;//.replace("Served at: /concesionario", "");
+                    jsonResponse = jsonResponse.replaceAll('"', '/');
+                    jsonResponse = jsonResponse.replaceAll("'", '"');
+                    jsonResponse = jsonResponse.replaceAll("/", "'");
+                    console.log(jsonResponse)
+        		    let jsonify = JSON.parse(jsonResponse);
+
+                    let nombre = (jsonify['nombre'] === "null" || jsonify['nombre'] == null || jsonify['nombre'] == undefined) ? "" : jsonify['nombre'];
+                    let email = (jsonify['email'] === "null" || jsonify['email'] == null || jsonify['email'] == undefined) ? "" : jsonify['email'];
+                    let telefono = jsonify['telefono'] == 0 ? "" : jsonify['telefono'];
+                    let puesto = (jsonify['puesto'] === "null" || jsonify['puesto'] == null || jsonify['puesto'] == undefined) ? "" : jsonify['puesto'];
+                    let departamento = (jsonify['departamento'] === "null" || jsonify['departamento'] == null || jsonify['departamento'] == undefined) ? "" : jsonify['departamento'];
+                    let sueldo = (jsonify['sueldo'] === "null" || jsonify['sueldo'] == null || jsonify['sueldo'] == undefined) ? "" : jsonify['sueldo'];
+                    let usuario = (jsonify['usuario'] === "null" || jsonify['usuario'] == null || jsonify['usuario'] == undefined) ? "" : jsonify['usuario'];
+
+                    document.getElementById("nombre-emp-vm").innerHTML = nombre;
+                    document.getElementById("telefono-emp-vm").innerHTML = telefono;
+                    document.getElementById("email-emp-vm").innerHTML = email;
+                    document.getElementById("puesto-emp-vm").innerHTML = puesto;
+                    document.getElementById("departamento-emp-vm").innerHTML = departamento;
+                    document.getElementById("sueldo-emp-vm").innerHTML = sueldo;
+                    document.getElementById("usuario-emp-vms").innerHTML = usuario;
+                }
+            }
+        };
+        xhttp.open("POST", "Requests", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("fichaEmp=" + active);
+    }
+</script>
+</html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <title>Cuenta</title>
+</head>
+<body>
+<nav class="navbar-container">
+    <a href="./index.html" class="nav-logo-block">
+        <img src="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png" alt="concesionario-logo" class="nav-logo">
+    </a>
+    <div class="nav-nombre-block">
+        <span class="nav-nombre"></span>
+    </div>
+    <div class="menu">
+        <a href="./stock.html" class="menu-link">Ver stock</a>
+        <a href="./sobreNosotros.html" class="menu-link">Sobre nosotros</a>
+        <a href="./cuenta.html" class="menu-link">Cuenta</a>
+    </div>
+</nav>
+<section id="cuenta-container">
+    <section id="informacion-personal">
+        <h4>Información personal</h4>
+        <div id="cuenta-usuario">
+            <span>Usuario: </span>
+            <span id="cuenta-edit-usuario">
+                
+            </span>
+        </div>
+        <div id="cuenta-nombre">
+            <span>Nombre: </span>
+            <span id="cuenta-edit-nombre">
+                
+            </span>
+        </div>
+        <div id="cuenta-email">
+            <span>Email: </span>
+            <span id="cuenta-edit-email">
+                
+            </span>
+        </div>
+        <div id="cuenta-telefono">
+            <span>Teléfono: </span>
+            <span id="cuenta-edit-telefono">
+                
+            </span>
+        </div>
+    </section>
+    <section id="citas-container">
+        <div id="cuenta-pedir-citas">
+            <h4 id="cuenta-pedir-citas-title">
+                Pedir cita
+            </h4>
+            <div>
+                <form action="javascript:pedirCita()">
+                    <input type="datetime-local" name="cuenta-calendario-cita" id="cuenta-calendario-cita">
+                    <button class="botones" type="submit">Pedir cita</button>
+                </form>
+            </div>
+        </div>
+        <div id="cuenta-ver-citas">
+            <h4 id="cuenta-ver-citas-title">
+                Citas pendientes
+            </h4>
+            <span id="cuenta-citas">
+                
+            </span>
+        </div>
+    </section>
+    <section id="vehiculos-comprados-container">
+        <h4>Vehículos comprados</h4>
+        <div class="vehiculo-comprado" id="mod-comp-all">
+            <div class="img-modelo-comp" id="mod-comp-img">
+                
+            </div>
+            <div id="about-modelo-comp">
+                <div class="title-modelo-comp" id="mod-comp-title">
+                    
+                </div>
+                <div class="specs-modelo-comp" id="mod-comp-specs">
+                   
+                </div>
+                <div class="info-modelo-comp" id="mod-comp-info">
+                     
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<footer class="pie-container">
+    <div class="pie-infos">
+        <a href="./textosLegales/avisoLegal.html" class="links texto-legal">Aviso legal</a>
+        <a href="./textosLegales/politicaPrivacidad.html" class="links texto-legal">Política de privacidad</a>
+        <a href="./textosLegales/cookies.html" class="links texto-legal">Cookies</a>
+    </div>
+    <div id="made-with-love">
+        Made with &#10084; by <span style="color: var(--details);">Miguel Zamora</span> 
+    </div>
+</footer>
+</body>
+<script>
+
+    window.onload = function () {
+        let active = true;
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (this.responseText == "./iniciarSesion.html") {
+                        window.location.href = this.responseText;
+                    } else {
+                        let jsonResponse = this.responseText;
+	                    jsonResponse = jsonResponse.replaceAll('"', '/');
+	                    jsonResponse = jsonResponse.replaceAll("'", '"');
+	                    jsonResponse = jsonResponse.replaceAll("/", "'");
+	        		    let jsonify = JSON.parse(jsonResponse);
+
+	                    let usuario = (jsonify['usuario'] === "null" || jsonify['usuario'] == null || jsonify['usuario'] == undefined) ? "" : jsonify['usuario'];
+                        let nombre = (jsonify['nombre'] === "null" || jsonify['nombre'] == null || jsonify['nombre'] == undefined) ? "" : jsonify['nombre'];
+                        let email = (jsonify['email'] === "null" || jsonify['email'] == null || jsonify['email'] == undefined) ? "" : jsonify['email'];
+                        let telefono = jsonify['telefono'] == 0 ? "" : jsonify['telefono'];
+                        let citas = (jsonify['fecha'] === "null" || jsonify['fecha'] == null || jsonify['fecha'] == undefined) ? "" : jsonify['fecha'];
+                        let modelo = (jsonify['modelo'] === "null" || jsonify['modelo'] == null || jsonify['modelo'] == undefined) ? "" : jsonify['modelo'];
+                        let precio = jsonify['precio'] == 0 ? "" : jsonify['precio'];
+                        let caballos = jsonify['caballos'] == 0 ? "" : jsonify['caballos'];
+
+	                    document.getElementById("cuenta-edit-usuario").innerHTML = usuario;
+	                    document.getElementById("cuenta-edit-nombre").innerHTML = nombre;
+	                    document.getElementById("cuenta-edit-email").innerHTML = email;
+	                    document.getElementById("cuenta-edit-telefono").innerHTML = telefono;
+	                    document.getElementById("cuenta-citas").innerHTML = citas;
+	                    document.getElementById("mod-comp-title").innerHTML = modelo;
+	                    document.getElementById("mod-comp-specs").innerHTML = precio;
+	                    document.getElementById("mod-comp-info").innerHTML = caballos; 
+                    
+                    }
+                }
+        };
+        xhttp.open("POST", "Requests", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("cuenta=" + active);
+
+    }
+</script>
+</html>

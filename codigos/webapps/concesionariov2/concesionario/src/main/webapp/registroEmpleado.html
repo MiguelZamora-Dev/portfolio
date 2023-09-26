@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./scripts.js"></script>
+    <title>Registrar empleado</title>
+</head>
+<body>
+    <form action="javascript:recuperarDatosFormRegEmp()" name="regEmp" id="regEmp" method="post">
+        <div id="reg-container">
+            <div id="reg-subcontainer">
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Usuario
+                    </span>
+                    <input type="text" name="reg-usuario-emp" id="reg-usuario-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Nombre
+                    </span>
+                    <input type="text" name="reg-nombre-emp" id="reg-nombre-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Teléfono
+                    </span>
+                    <input type="tel" name="reg-telefono-emp" id="reg-telefono-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Email
+                    </span>
+                    <input type="email" name="reg-email-emp" id="reg-email-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Departamento
+                    </span>
+                    <input type="text" name="reg-dpt-emp" id="reg-dpt-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Puesto
+                    </span>
+                    <input type="text" name="reg-puesto-emp" id="reg-puesto-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Sueldo
+                    </span>
+                    <input type="text" name="reg-sueldo-emp" id="reg-sueldo-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Contraseña
+                    </span>
+                    <input type="password" name="reg-psw-emp" id="reg-psw-emp" class="reg-data">
+                </div>
+                <div class="reg-data-block">
+                    <span class="reg-data-title">
+                        Repetir contraseña
+                    </span>
+                    <input type="password" name="reg-rep-psw-emp" id="reg-rep-psw-emp" class="reg-data">
+                </div>
+                <div id="reg-botones">
+                    <button onclick="window.location='./indexPrivado.html'" class="botones">Volver</button>
+                    <button type="submit" class="botones" name="regEmpSubmit" id="reg-emp-submit">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

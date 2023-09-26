@@ -1,0 +1,19 @@
+{
+    "modelo": "claseB2023",
+    "imagenDestacada": "./resources/img/MBB/mercedes-benz-b-klasse-2023.jpg",
+    "imagenFrontal": "",
+    "imagenLateral": "",
+    "imagenTrasera": "",
+    "imagenInterior": "",
+    "precio": 100000,
+    "colores": ["blue", "white", "grey", "black", "red"],
+    "caballos": 120,
+    "maletero": 200,
+    "puertas": 5,
+    "descripcion": "Este es un vehiculo versátil, pensado para el día a día más exigente",
+    "azul": "../../resources/img/MBB/mbsb-azul.jpg",
+    "blanco": "../../resources/img/MBB/mbsb-blanco.jpg",
+    "gris": "../../resources/img/MBB/mbsb-gris.jpeg",
+    "negro": "../../resources/img/MBB/mbsb-negro.jpg",
+    "rojo": "../../resources/img/MBB/mbsb-rojo.webp"
+}

@@ -1,0 +1,15 @@
+127.0.0.1 - - [24/Apr/2023:10:29:24 +0200] "GET / HTTP/1.1" 404 687
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:29:26 +0200] "GET /concesionario/registroEmpleado.html HTTP/1.1" 200 3429
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:29:26 +0200] "GET /concesionario/styles.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:29:26 +0200] "GET /concesionario/scripts.js HTTP/1.1" 200 4077
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:29:27 +0200] "GET /favicon.ico HTTP/1.1" 404 698
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:30:09 +0200] "GET /concesionario/registroEmpleado.html HTTP/1.1" 200 3429
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:30:09 +0200] "GET /concesionario/scripts.js HTTP/1.1" 200 4077
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:30:09 +0200] "GET /concesionario/styles.css HTTP/1.1" 200 5912
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:30:50 +0200] "GET /concesionario/registroEmpleado.html HTTP/1.1" 200 3429
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:30:51 +0200] "GET /concesionario/styles.css HTTP/1.1" 200 5912
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:30:51 +0200] "GET /concesionario/scripts.js HTTP/1.1" 200 4077
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:33:35 +0200] "GET /concesionario/registroEmpleado.html HTTP/1.1" 200 3429
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:33:35 +0200] "GET /concesionario/scripts.js HTTP/1.1" 200 4077
+0:0:0:0:0:0:0:1 - - [24/Apr/2023:10:33:35 +0200] "GET /concesionario/styles.css HTTP/1.1" 200 5912
+127.0.0.1 - - [24/Apr/2023:10:34:04 +0200] "GET / HTTP/1.1" 404 687

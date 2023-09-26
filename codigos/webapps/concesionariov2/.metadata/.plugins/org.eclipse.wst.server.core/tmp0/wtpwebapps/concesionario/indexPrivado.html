@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./resources/img/logo/Mercedes-Benz_Star_2022.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <title>Privado</title>
+</head>
+<body>
+    <div class="menu-bar">
+        <button onclick="window.location='./indexPrivado.html'" class="botones">Volver</button>
+    </div>
+    <div id="index-privado-container">
+        <div class="enumerable-sec">
+            <div class="enumerables">
+                <div class="enumerable">
+                    <button onclick="window.location='./fichaEmpleado.html'" class="botones botonIPrivado">Mis datos</button>
+                </div>
+                <div class="enumerable">
+                    <button onclick="window.location='./configurarStock.html'" class="botones botonIPrivado">Configurar coche</button>
+                </div>
+                <div class="enumerable">
+                    <button onclick="window.location='./registroEmpleado.html'" class="botones botonIPrivado">Registrar empleado</button>
+                </div>
+                <div class="enumerable">
+                    <button onclick="window.location='./funcionesSistema.html'" class="botones botonIPrivado">Funciones del sistema</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        let active = true;
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (this.responseText == "./iniciarSesion.html") {
+                        window.location.href = this.responseText;
+                    }
+                }
+        };
+        xhttp.open("POST", "Requests", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("inicioPrivado=" + active);
+    };
+</script>
+</html>
