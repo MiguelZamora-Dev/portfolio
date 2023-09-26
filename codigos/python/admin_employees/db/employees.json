@@ -1,0 +1,12 @@
+{
+    "name": "Miguel",
+    "surname": "Zamora",
+    "job": "Coder",
+    "job_section": "Web dev",
+    "time_worked_here": "3 years",
+    "age": 24,
+    "gender": "Male",
+    "_is_in_project": true,
+    "_what_project_is_in": "Admin employees",
+    "permissions": "All permissions"
+}
