@@ -1,0 +1,5 @@
+1. Añadir BD con el ID correspondiente
+2. Incluir las características de una clase Usuario en Personaje para sesiones de juego
+3. Añadir eliminación de un Personaje, Mascota, Mision 
+4. Añadir constructores con sobrecarga para recuperar de la BD
+5. Añadir en la eliminación de un Objeto, que se elimine de la BD y del gestor de IDs
