@@ -10,7 +10,10 @@ def renameAll (originDirectory, destinationDirectory, newName):
         destinationDirectory = originDirectory
     if newName == "\n" or newName == " " or newName == "" or newName == None:
         newName = "file"
-    directory = os.listdir(originDirectory)
+    try:
+        directory = os.listdir(originDirectory)
+    except:
+        raise Exception("Origin directory does not contain files?")
     print("Origin directory: " + originDirectory)
     print("Destination directory: " + destinationDirectory)
     print("New name: " + newName)
