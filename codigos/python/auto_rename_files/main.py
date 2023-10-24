@@ -2,6 +2,8 @@
 import os
 import shutil
 
+#Rename made with shutil move similarly to linux command [mv] 
+#Another option is using os.rename(olDirectory + oldName, newDirectory + newName)
 def renameAll (originDirectory, destinationDirectory, newName):
     i = 0
     if originDirectory == "\n" or originDirectory == " " or originDirectory == "" or originDirectory == None:
