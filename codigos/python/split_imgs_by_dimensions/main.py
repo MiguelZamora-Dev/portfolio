@@ -3,8 +3,12 @@ from PIL import Image
 import shutil
 
 def splitByReso(originDirectory = "./images", destinationDirectory = ".", threshold = 175):
-    directory = os.listdir(originDirectory)
-    opCount = 0
+    try:
+        directory = os.listdir(originDirectory)
+    except:
+        raise Exception("Please add a valid origin directory")
+    if (threshold == " " or threshold == "" or threshold == None or threshold < 0):
+        threshold = 175
     notValidCount = 0
     verticalCount = 0
     horizontalCount = 0
@@ -18,26 +22,24 @@ def splitByReso(originDirectory = "./images", destinationDirectory = ".", thresh
     print("Origin directory: " + originDirectory + "\nDestination directory: " + destinationDirectory + "\nThreshold: " + str(threshold))
     print("Items at the directory: " + str(len(directory)))
     for img in directory:
+        # if img.endswith(".jpg") or img.endswith(".jpeg") or img.endswith(".png") or ...
         if not img.endswith(".mp4") and not img.endswith(".webm"):
             image = Image.open(originDirectory + "/" + img)
             if (image.width > image.height + threshold):
                 if img not in os.listdir(destinationDirectory + "/horizontal"):
                     shutil.copy(originDirectory + "/" + img, destinationDirectory + "/horizontal")
                     horizontalCount += 1
-                    opCount += 1
             elif (image.height > image.width + threshold):
                 if img not in os.listdir(destinationDirectory + "/vertical"):
                     shutil.copy(originDirectory + "/" + img, destinationDirectory + "/vertical")
-                    opCount += 1
                     verticalCount += 1
             else:
                 if img not in os.listdir(destinationDirectory + "/square"):
                     shutil.copy(originDirectory + "/" + img, destinationDirectory + "/square")
-                    opCount += 1
                     squareCount += 1
         else:
             notValidCount += 1
-    print(str(opCount) + " images has been ordered by resolution. " + str(notValidCount) + " was not valid format")
+    print(str(horizontalCount + verticalCount + squareCount) + " images has been ordered by resolution. " + str(notValidCount) + " was not valid format")
     print(str(verticalCount) + " images in vertical folder\n" + str(horizontalCount) + " images in horizontal folder\n" + str(squareCount) + " images in square folder")
 
 
